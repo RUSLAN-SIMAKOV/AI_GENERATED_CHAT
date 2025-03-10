@@ -20,7 +20,7 @@ public class AiGeneratedChatApplication implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         User user = new User("id",
                 "firstName",
                 "lastName",
@@ -31,6 +31,8 @@ public class AiGeneratedChatApplication implements CommandLineRunner {
         userRepository.save(user);
         List<User> all = userRepository.findAll();
         System.out.println(all);
+
+
 
     }
 }
